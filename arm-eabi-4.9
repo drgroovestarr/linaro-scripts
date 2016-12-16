@@ -38,6 +38,7 @@ echo "${bldblu}                                          ${txtrst}"
 
 # Make sure gcc is on the correct branch
 cd ../gcc/gcc-UBER && rm -rf * && git reset --hard && git fetch uu linaro-4.9 && git checkout FETCH_HEAD && cd ../../;
+cd ../../
 
 # Try to parallelize the build for faster performance.
 export NUM_JOBS="$(cat /proc/cpuinfo | grep -c processor)";
